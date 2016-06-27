@@ -9,8 +9,8 @@ xhr.get(endpoint, function (err, data) {
   }
 
   // In case you're curious
-  console.log(data.body[0], 'this is the data body yo') // FYI: data.body is a string
-  var data = data.body[0].name
+  console.log(data.body, 'data body') // FYI: data.body is a string
+  console.log(data.body[0], 'data body first entry') // FYI: data.body is a string
   // Replace 'Space' below with the response
   var target = document.getElementsByTagName('main')[0]
   target.innerHTML = greeting({name: data})
