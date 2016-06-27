@@ -84,5 +84,5 @@ function once(n){var o=!1;return function(){if(!o)return o=!0,n.apply(this,argum
 function extend(){for(var r={},e=0;e<arguments.length;e++){var t=arguments[e];for(var n in t)hasOwnProperty.call(t,n)&&(r[n]=t[n])}return r}module.exports=extend;var hasOwnProperty=Object.prototype.hasOwnProperty;
 
 },{}],30:[function(require,module,exports){
-var HandlebarsCompiler=require("hbsfy/runtime");module.exports=HandlebarsCompiler.template({compiler:[7,">= 4.0.0"],main:function(e,r,a,n,l){return"<h1>Welcome to the "+e.escapeExpression(e.lambda(null!=r?r.name:r,r))+"!</h1>\n\n<p>Some text here</p>\n"},useData:!0});
+var HandlebarsCompiler=require("hbsfy/runtime");module.exports=HandlebarsCompiler.template({compiler:[7,">= 4.0.0"],main:function(e,n,a,l,r){var t;return"<h1>Welcome to the "+e.escapeExpression((t=null!=(t=a.name||(null!=n?n.name:n))?t:a.helperMissing,"function"==typeof t?t.call(null!=n?n:{},{name:"name",hash:{},data:r}):t))+"!</h1>\n\n<p>Some text here</p>\n"},useData:!0});
 },{"hbsfy/runtime":23}]},{},[1]);
