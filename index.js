@@ -7,7 +7,7 @@ xhr.get(endpoint, function (err, data) {
   if (err) {
     console.error(err)
   }
-  console.log(data) // FYI: data.body is a string
+  console.log(data.body[0]) // FYI: data.body is a string
   // Replace 'Space' below with the response
   var target = document.getElementsByTagName('main')[0]
   target.innerHTML = greeting({name: 'Whatever'})
