@@ -13,6 +13,5 @@ xhr.get(endpoint, function (err, data) {
   console.log('data is a ', typeof data)
   // Replace 'Space' below with the response
   var target = document.getElementsByTagName('main')[0]
-  console.log(data[name])
-  target.innerHTML = greeting({name: data.name})
+  target.innerHTML = greeting(data)
 })
