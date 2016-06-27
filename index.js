@@ -9,9 +9,8 @@ xhr.get(endpoint, function (err, data) {
   }
 
   var data = JSON.parse(data.body)
-  console.log(data, 'should be an object I can use')
-  console.log('data is a ', typeof data)
+  // console.log(data, 'should be an object I can use')
   // Replace 'Space' below with the response
   var target = document.getElementsByTagName('main')[0]
-  target.innerHTML = greeting(data)
+  target.innerHTML = greeting(data[0])
 })
