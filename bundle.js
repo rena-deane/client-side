@@ -68,12 +68,11 @@ function forEach(r,t,o){if(!isFunction(t))throw new TypeError("iterator must be 
 module.exports=require("./dist/cjs/handlebars.runtime")["default"];
 },{"./dist/cjs/handlebars.runtime":4}],23:[function(require,module,exports){
 module.exports=require("handlebars/runtime")["default"];
-
 },{"handlebars/runtime":22}],24:[function(require,module,exports){
 function isFunction(o){var t=toString.call(o);return"[object Function]"===t||"function"==typeof o&&"[object RegExp]"!==t||"undefined"!=typeof window&&(o===window.setTimeout||o===window.alert||o===window.confirm||o===window.prompt)}module.exports=isFunction;var toString=Object.prototype.toString;
-
 },{}],25:[function(require,module,exports){
 var trim=require("trim"),forEach=require("for-each"),isArray=function(r){return"[object Array]"===Object.prototype.toString.call(r)};module.exports=function(r){if(!r)return{};var e={};return forEach(trim(r).split("\n"),function(r){var t=r.indexOf(":"),i=trim(r.slice(0,t)).toLowerCase(),o=trim(r.slice(t+1));"undefined"==typeof e[i]?e[i]=o:isArray(e[i])?e[i].push(o):e[i]=[e[i],o]}),e};
+
 },{"for-each":2,"trim":26}],26:[function(require,module,exports){
 function trim(r){return r.replace(/^\s*|\s*$/g,"")}exports=module.exports=trim,exports.left=function(r){return r.replace(/^\s*/,"")},exports.right=function(r){return r.replace(/\s*$/,"")};
 
@@ -85,5 +84,5 @@ function once(n){var o=!1;return function(){if(!o)return o=!0,n.apply(this,argum
 function extend(){for(var r={},e=0;e<arguments.length;e++){var t=arguments[e];for(var n in t)hasOwnProperty.call(t,n)&&(r[n]=t[n])}return r}module.exports=extend;var hasOwnProperty=Object.prototype.hasOwnProperty;
 
 },{}],30:[function(require,module,exports){
-var HandlebarsCompiler=require("hbsfy/runtime");module.exports=HandlebarsCompiler.template({compiler:[7,">= 4.0.0"],main:function(e,a,n,l,r){var m;return"<h1>Welcome to "+e.escapeExpression((m=null!=(m=n.name||(null!=a?a.name:a))?m:n.helperMissing,"function"==typeof m?m.call(null!=a?a:{},{name:"name",hash:{},data:r}):m))+"!</h1>\n"},useData:!0});
+var HandlebarsCompiler=require("hbsfy/runtime");module.exports=HandlebarsCompiler.template({compiler:[7,">= 4.0.0"],main:function(e,a,n,l,r){var i;return"<h1>Hello "+e.escapeExpression((i=null!=(i=n.name||(null!=a?a.name:a))?i:n.helperMissing,"function"==typeof i?i.call(null!=a?a:{},{name:"name",hash:{},data:r}):i))+"!</h1>\n"},useData:!0});
 },{"hbsfy/runtime":23}]},{},[1]);
